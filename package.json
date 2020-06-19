@@ -17,10 +17,8 @@
     }
   },
   "lint-staged": {
-    "*.{svelte,html,js,json}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
+    "*.{json,scss,css,md}": "prettier --write",
+    "*.{svelte,html,js}": "eslint --fix"
   },
   "dependencies": {
     "compression": "^1.7.1",
