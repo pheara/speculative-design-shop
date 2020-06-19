@@ -11,6 +11,11 @@
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.{svelte,html,js,json}": [
       "eslint --fix",
