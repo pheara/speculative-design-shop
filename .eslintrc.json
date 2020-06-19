@@ -3,7 +3,7 @@
     "ecmaVersion": 2019,
     "sourceType": "module"
   },
-  "extends": ["plugin:prettier/recommended", "eslint:recommended"],
+  "extends": ["prettier"],
   "env": {
     "es6": true,
     "browser": true,
