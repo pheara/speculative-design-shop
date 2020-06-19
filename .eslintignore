@@ -1,0 +1,9 @@
+/.vscode/
+__sapper__/
+node_modules/
+*.svg
+*.png
+*.jpg
+.DS_Store
+/src/node_modules/@sapper/
+yarn-error.log
