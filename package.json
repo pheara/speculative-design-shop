@@ -1,5 +1,5 @@
 {
-  "name": "TODO",
+  "name": "speculative-design-shop",
   "description": "TODO",
   "version": "0.0.1",
   "scripts": {
@@ -10,6 +10,12 @@
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run"
+  },
+  "lint-staged": {
+    "*.{svelte,html,js,json}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "compression": "^1.7.1",
@@ -31,6 +37,8 @@
     "eslint-plugin-cypress": "^2.11.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-svelte3": "^2.7.3",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
     "rollup": "^2.3.4",
