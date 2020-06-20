@@ -6,6 +6,7 @@
   import Gallery from './Gallery.svelte'
   import MainDescription from './MainDescription.svelte'
   import Navbar from './Navbar.svelte'
+  import CheckoutBox from './CheckoutBox.svelte'
   //   export let name
 </script>
 
@@ -31,6 +32,7 @@
   <section id="product" class="columns section">
     <Gallery class="column is-one-quarter" />
     <MainDescription class="column is-half" />
+    <CheckoutBox class="column is-one-quarter box" />
 
   </section>
 </main>
