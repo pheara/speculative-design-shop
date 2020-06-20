@@ -17,8 +17,8 @@
     }
   },
   "lint-staged": {
-    "*.{json,scss,css,md}": "prettier --write",
-    "*.{svelte,html,js}": "eslint --fix"
+    "*.{json,scss,css,md,html}": "prettier --write",
+    "*.{svelte,js}": "eslint --fix"
   },
   "dependencies": {
     "bulma": "^0.9.0",
