@@ -1,5 +1,6 @@
 <script>
   import 'bulma/css/bulma.css'
+  import '@fortawesome/fontawesome-free/css/all.css'
   //   import { Button } from 'svelma'
   //   import Button from 'svelma/src/components/Button.svelte'
   import Gallery from './Gallery.svelte'
