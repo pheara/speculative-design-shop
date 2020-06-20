@@ -12,8 +12,7 @@
 </p> -->
   <p>Currently not deliverable.</p>
   <Button type="is-primary">
-    <!-- <Icon pack="fab" size="is-large" icon="github" /> -->
-    <Icon pack="fab" icon="github" />
+    <Icon pack="fas" icon="cart-plus" />
     <span>Add to Cart</span>
   </Button>
 </div>
