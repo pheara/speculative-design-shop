@@ -15,7 +15,9 @@
     </figure>
   </div>
   <div class="card-content">
-    <div class="media">
+    <p class="title is-4">Curabitur a Tortor Nec Lorem Bibendum</p>
+    <StarRating />
+    <!-- <div class="media">
       <div class="media-left" />
       <div class="media-content">
         <p class="title is-4">Curabitur a Tortor Nec Lorem Bibendum</p>
@@ -32,6 +34,6 @@
       <a href="#">#responsive</a>
       <br />
       <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-    </div>
+    </div> -->
   </div>
 </div>
