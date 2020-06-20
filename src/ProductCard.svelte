@@ -16,7 +16,7 @@
   </div>
   <div class="card-content">
     <p class="title is-4">Curabitur a Tortor Nec Lorem Bibendum</p>
-    <StarRating />
+    <StarRating stars={3.2} nrOfRatings={12} />
     <!-- <div class="media">
       <div class="media-left" />
       <div class="media-content">

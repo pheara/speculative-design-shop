@@ -27,7 +27,7 @@
 
   <div class="rating">
     <div class="starcontainer">
-      <StarRating />
+      <StarRating stars={4.1} nrOfRatings={51} />
     </div>
     <a href="./" class="comments">51 comments</a>
   </div>
