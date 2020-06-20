@@ -28,40 +28,25 @@
 
 <style>
   .gallery {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: [col1-start] 1fr 1fr 1fr 1fr [lastcol-end];
+    grid-template-rows: 4fr 64px;
+
+    grid-column-gap: 0.25rem;
+    grid-row-gap: 0.25rem;
+
+    justify-items: center;
+    align-items: center;
   }
-
-  .thumbs {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: flex-start;
-
-    flex-grow: 1;
-    flex-basis: 64px;
+  .largeImg {
+    grid-column-start: col1-start;
+    grid-column-end: lastcol-end;
+    grid-row-start: 1;
+    grid-row-end: 1;
   }
 
   .thumb {
-    flex-grow: 1;
-    flex-basis: 64px;
-    min-width: 64px;
-
-    border-color: grey;
-    border-style: solid;
-    border-left-width: 1px;
-    border-right-width: 1px;
-    border-bottom-width: 1px;
-  }
-
-  .thumb:first {
-    border-top-width: 1px;
-  }
-
-  .largeImg {
-    flex-grow: 6;
+    border: 1px solid grey;
   }
 </style>
 
@@ -70,23 +55,9 @@
     class="largeImg"
     src={productPictures[0].src}
     alt={productPictures[0].alt} />
-  <div class="thumbs mt-1">
-    {#each productPictures as img}
-      <figure class="thumb image is-64x64">
-        <img src={img.src} alt={img.alt} />
-      </figure>
-    {/each}
-  </div>
+  {#each productPictures as img}
+    <figure class="thumb image is-64x64">
+      <img src={img.src} alt={img.alt} />
+    </figure>
+  {/each}
 </div>
-
-<!-- <div class="tile is-ancestor box {clazz}">
-  <div class="tile is-vertical is-parent">
-    {#each productPictures as img}
-      <figure class="tile image is-64x64">
-        <img src={img.src} alt={img.alt} style="" />
-      </figure>
-    {/each}
-  </div>
-  <figure class="tile image is-square">
-  </figure>
-</div> -->
