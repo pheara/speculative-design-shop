@@ -29,14 +29,14 @@
 <style>
   .gallery {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: start;
     align-items: flex-start;
   }
 
   .thumbs {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: start;
     align-items: flex-start;
 
@@ -61,22 +61,22 @@
   }
 
   .largeImg {
-    flex-grow: 4;
+    flex-grow: 6;
   }
 </style>
 
 <div class="gallery {clazz}">
-  <div class="thumbs mr-1">
+  <img
+    class="largeImg"
+    src={productPictures[0].src}
+    alt={productPictures[0].alt} />
+  <div class="thumbs mt-1">
     {#each productPictures as img}
       <figure class="thumb image is-64x64">
         <img src={img.src} alt={img.alt} />
       </figure>
     {/each}
   </div>
-  <img
-    class="largeImg"
-    src={productPictures[0].src}
-    alt={productPictures[0].alt} />
 </div>
 
 <!-- <div class="tile is-ancestor box {clazz}">
