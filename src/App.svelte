@@ -44,7 +44,12 @@
 
       <h2 class="title is-4">Similar Products</h2>
 
-      <ProductCard />
+      <div style="display: flex; flex-direction: row;">
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+      </div>
 
     </div>
 
