@@ -1,4 +1,5 @@
 node_modules/
 /public/build/
+/public/webfonts/
 yarn-error.log
 .DS_Store

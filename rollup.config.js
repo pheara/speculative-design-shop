@@ -3,6 +3,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import livereload from "rollup-plugin-livereload";
 import postcss from "rollup-plugin-postcss";
+import copy from "rollup-plugin-copy";
 import { terser } from "rollup-plugin-terser";
 
 const production = !process.env.ROLLUP_WATCH;
@@ -37,6 +38,19 @@ export default {
       dedupe: ["svelte"],
     }),
     commonjs(),
+    copy({
+      verbose: true,
+      targets: [
+        {
+          //   src: "@fortawesome/fontawesome-free/webfonts/*",
+          src: "./node_modules/@fortawesome/fontawesome-free/webfonts",
+          dest: "public",
+        },
+      ],
+      //   assets: ["@fortawesome/fontawesome-free/webfonts"],
+      //   assets: ["./node_modules/@fortawesome/fontawesome-free/webfonts"],
+      //   assets: ["@fortawesome/fontawesome-free/webfonts"],
+    }),
 
     // In dev mode, call `npm run start` once
     // the bundle has been generated
