@@ -1,6 +1,8 @@
 <script>
   let clazz = ''
   export { clazz as class }
+
+  import StarRating from './StarRating.svelte'
 </script>
 
 <style>
@@ -9,34 +11,23 @@
     flex-direction: row;
     align-items: flex-start;
   }
-  .stars {
+  .starcontainer {
     flex-grow: 1;
-
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
   }
 
   .comments {
     flex-grow: 0;
   }
 
-  .nr-of-ratings {
-    /* margin-lef */
-  }
+  /* .nr-of-ratings { } */
 </style>
 
 <div class="column is-half content has-text-left {clazz}">
   <h1>Connection Wristband</h1>
 
   <div class="rating">
-    <div class="stars">
-      <img src="../star-full.svg" alt="full star" />
-      <img src="../star-full.svg" class="ml-1" alt="full star" />
-      <img src="../star-full.svg" class="ml-1" alt="full star" />
-      <img src="../star-full.svg" class="ml-1" alt="full star" />
-      <img src="../star-empty.svg" class="ml-1" alt="empty star" />
-      <a href="./" class="nr-of-ratings ml-2">(51)</a>
+    <div class="starcontainer">
+      <StarRating />
     </div>
     <a href="./" class="comments">51 comments</a>
   </div>
