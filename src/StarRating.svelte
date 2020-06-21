@@ -61,6 +61,8 @@
 
   <div>
     <span class="mr-2">{starsStr}</span>
-    <a href="./">({nrOfRatingsStr})</a>
+    {#if nrOfRatings}
+      <a href="./">({nrOfRatingsStr})</a>
+    {/if}
   </div>
 </div>

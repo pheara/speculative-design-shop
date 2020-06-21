@@ -47,9 +47,17 @@ function genDate(daysInFuture) {
   return d;
 }
 
+function genProfilePic(name) {
+  return (
+    "https://via.placeholder.com/500x500.png?text=avatar+of+" +
+    name.toLowerCase().replace(" ", "+")
+  );
+}
+
 const comments = [
   {
     name: "Jane Doe",
+    avatar: genProfilePic("Jane Doe"),
     rating: 4,
     date: genDate(-31),
     country: "Austria",
@@ -59,6 +67,7 @@ const comments = [
   },
   {
     name: "John Miller",
+    avatar: genProfilePic("John Mill"),
     rating: 1,
     date: genDate(-14),
     country: "Germany",

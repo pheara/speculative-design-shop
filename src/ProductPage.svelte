@@ -5,10 +5,9 @@
   import CheckoutBox from './CheckoutBox.svelte'
   import ProductCard from './ProductCard.svelte'
   import ProductCardRow from './ProductCardRow.svelte'
+  import Comment from './Comment.svelte'
 
   import { shuffleArray, filterObject } from './utils.js'
-
-  import ProductPage from './ProductPage.svelte'
 
   export let id = undefined
 
@@ -32,4 +31,14 @@
 <section>
   <h2 class="title is-4">Similar Products</h2>
   <ProductCardRow products={productRecommendations} />
+</section>
+
+<hr />
+
+<section>
+  <h2 class="title is-4">Customer Reviews</h2>
+  <!-- <ProductCardRow products={productRecommendations} /> -->
+  {#each product.comments as comment}
+    <Comment {...comment} />
+  {/each}
 </section>
