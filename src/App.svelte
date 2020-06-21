@@ -4,8 +4,10 @@
   //   import { Button } from 'svelma'
   //   import Button from 'svelma/src/components/Button.svelte'
 
-  import { Router, Link, Route } from 'svelte-routing'
-  export let url = ''
+  import { Router, Link, Route, router } from 'yrv'
+  Router.hashchange = true //enable hash-based routing
+  //   router.hashchange = true //enable hash-based routing
+  //   export let url = ''
 
   import Gallery from './Gallery.svelte'
   import MainDescription from './MainDescription.svelte'
@@ -39,29 +41,23 @@
   }
 </style>
 
-<Router {url}>
-  <Navbar />
-  <!-- <nav>
-    <Link to="/">Home</Link>
-    <Link to="about">About</Link>
-    <Link to="blog">Blog</Link>
-  </nav> -->
+<Navbar />
 
-  <main>
+<!-- <Link href="/">Home</Link>
+|
+<Link href="/World">Hello</Link>
+|
+<Link href="/not/found">NotFound</Link> -->
 
-    <!-- <div>
-    <Route path="blog/:id" component="{BlogPost}" />
-    <Route path="blog" component="{Blog}" />
-    <Route path="about" component="{About}" />
-    <Route path="/"><Home /></Route>
-  </div> -->
-    <Route path="product/:id" let:params>
-      <ProductPage id={params.id} />
+<main>
+
+  <Router>
+    <!-- <Route exact>Hello World</Route> -->
+    <Route exact redirect="/0ac55dd3" />
+    <Route fallback>Product not found</Route>
+    <Route exact path="/:id" let:router>
+      <ProductPage id={router.params.id} />
     </Route>
-    <Route path="/">
-      <ProductPage id="0ac55dd3" />
-    </Route>
+  </Router>
 
-  </main>
-
-</Router>
+</main>
