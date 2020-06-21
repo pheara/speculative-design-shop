@@ -16,6 +16,7 @@
 <style>
   .card {
     max-width: 160px;
+    min-width: 160px;
   }
   .stars {
     font-size: 0.5rem;
