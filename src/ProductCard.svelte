@@ -24,7 +24,9 @@
 </style>
 
 <div class="card">
-  <Link href="/{id}">
+  <Link
+    href="/{id}"
+    on:click={() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })}>
     <div class="card-image">
       <figure class="image is-1by1">
         <img src={image.src} alt={image.alt} />
