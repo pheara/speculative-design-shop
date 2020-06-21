@@ -5,8 +5,10 @@
 
   export let id = ''
   export let title = 'Untitled'
-  export let imgsrc = ''
-  export let imgalt = ''
+  export let image = {
+    src: '',
+    alt: '',
+  }
   export let stars = 0.0
   export let nrOfRatings = 0.0
 </script>
@@ -25,7 +27,7 @@
   <Link href="/{id}">
     <div class="card-image">
       <figure class="image is-1by1">
-        <img src={imgsrc} alt={imgalt} />
+        <img src={image.src} alt={image.alt} />
       </figure>
     </div>
     <div class="card-content">

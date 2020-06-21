@@ -2,6 +2,7 @@
   import ProductCard from './ProductCard.svelte'
 
   export let products = {}
+  const emptyImg = { src: '', alt: '' }
 </script>
 
 <style>
@@ -20,8 +21,7 @@
         title={p.title}
         stars={p.stars}
         nrOfRatings={p.nrOfRatings}
-        imgalt={p.images.length > 0 ? p.images[0].alt : ''}
-        imgsrc={p.images.length > 0 ? p.images[0].src : ''} />
+        image={p.images.length > 0 ? p.images[0] : emptyImg} />
     </div>
   {/each}
   <!-- <ProductCard />
