@@ -1,4 +1,3 @@
-// function image(src, alt)
 function genDescription(id) {
   return `
   <p>
@@ -42,6 +41,33 @@ function genImgs(id, numImgs) {
   return imgs;
 }
 
+function genDate(daysInFuture) {
+  const d = new Date(Date.now());
+  d.setDate(d.getDate() + daysInFuture);
+  return d;
+}
+
+const comments = [
+  {
+    name: "Jane Doe",
+    rating: 4,
+    date: genDate(-31),
+    country: "Austria",
+    title: "Keep the connection in those last moments",
+    comment:
+      "Curabitur a tortor nec lorem bibendum viverra. Phasellus sit amet sodales ipsum. Etiam non diam vel enim dapibus consectetur. Praesent nulla enim, mattis eget commodo a, ultricies vel libero. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+  },
+  {
+    name: "John Miller",
+    rating: 1,
+    date: genDate(-14),
+    country: "Germany",
+    title: "Absolutely terrible!",
+    comment:
+      "Maecenas viverra mattis lacus, ut dictum ipsum tincidunt ac. Sed condimentum turpis vitae magna pharetra, finibus eleifend tellus dictum.",
+  },
+];
+
 export const products = {
   "0ac55dd3": {
     id: "0ac55dd3",
@@ -52,6 +78,7 @@ export const products = {
     priceEUR: 49.9,
     images: genImgs("0ac55dd3", 6),
     description: genDescription("0ac55dd3"),
+    comments: comments,
   },
   "26578380": {
     id: "26578380",
@@ -62,6 +89,7 @@ export const products = {
     priceEUR: 29.9,
     images: genImgs("26578380", 3),
     description: genDescription("26578380"),
+    comments: comments,
   },
   "2dd88a1f": {
     id: "2dd88a1f",
@@ -72,6 +100,7 @@ export const products = {
     priceEUR: 9.9,
     images: genImgs("2dd88a1f", 4),
     description: genDescription("2dd88a1f"),
+    comments: comments,
   },
   "58b81ae9": {
     id: "58b81ae9",
@@ -82,6 +111,7 @@ export const products = {
     priceEUR: 12,
     images: genImgs("58b81ae9", 1),
     description: genDescription("58b81ae9"),
+    comments: comments,
   },
   "45c07bdd": {
     id: "45c07bdd",
@@ -92,6 +122,7 @@ export const products = {
     priceEUR: 55,
     images: genImgs("45c07bdd", 2),
     description: genDescription("45c07bdd"),
+    comments: comments,
   },
   "6561d06e": {
     id: "6561d06e",
@@ -102,6 +133,7 @@ export const products = {
     priceEUR: 99,
     images: genImgs("6561d06e", 5),
     description: genDescription("6561d06e"),
+    comments: comments,
   },
 };
 // 9c75281bf2bd8b2e
