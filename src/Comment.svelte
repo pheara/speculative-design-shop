@@ -8,6 +8,14 @@
   export let title = ''
   export let comment = ''
   export let avatar = ''
+
+  const options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }
+  const dateStr = date.toLocaleDateString('en-US', options)
 </script>
 
 <article class="media">
@@ -18,8 +26,11 @@
   </figure>
   <div class="media-content">
     <div class="content has-text-left">
-      <p class="">{name}</p>
-      <p class="title is-6">{title}</p>
+
+      <div class="is-size-7 mb-2">{name} in {country} on {dateStr}</div>
+      <div class="title is-6 mb-2">{title}</div>
+      <!-- <hgroup class="mb-1">
+      </hgroup> -->
       <p>{comment}</p>
       <StarRating stars={rating} />
     </div>

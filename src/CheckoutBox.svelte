@@ -1,9 +1,10 @@
 <script>
   let clazz = ''
   export { clazz as class }
-  //   import { Icon } from 'svelma'
+
   import Icon from 'svelma/src/components/Icon.svelte'
   import Button from 'svelma/src/components/Button.svelte'
+  import { formatDate } from './utils.js'
 
   export let price = 0
   $: priceStr = new String(
@@ -22,6 +23,7 @@
     day: 'numeric',
   }
   const deliveryDateStr = deliveryDate.toLocaleDateString('en-US', options)
+  //   const deliveryDateStr = formatDate(deliveryDate)
 
   let quantitySelected = '1'
 

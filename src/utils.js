@@ -24,3 +24,13 @@ export function filterObject(obj, f) {
 export function getRandomInt(min, maxExcl) {
   return Math.floor(Math.random() * (maxExcl - min) + min);
 }
+
+export function formatDate(date) {
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  return deliveryDate.toLocaleDateString("en-US", options);
+}
