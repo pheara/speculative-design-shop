@@ -3,6 +3,18 @@
   export { clazz as class }
 
   export let productImages = []
+  let selected = undefined
+  function select(img) {
+    selected = img
+  }
+  $: {
+    if (!productImages || productImages.length === 0) {
+      select(undefined)
+    } else if (!selected || productImages.indexOf(selected) < 0) {
+      // no pic selected yet or selected not among product images anymore
+      select(productImages[0])
+    }
+  }
 </script>
 
 <style>
@@ -23,14 +35,22 @@
   .thumb {
     border: 1px solid grey;
   }
+  .thumb.is-selected {
+    border-color: #00d1b2; /*primary*/
+    border-width: 2px;
+  }
 </style>
 
 <div class="gallery {clazz}">
-  <img class="largeImg" src={productImages[0].src} alt={productImages[0].alt} />
+  {#if selected}
+    <img class="largeImg" src={selected.src} alt={selected.alt} />
+  {/if}
   <div class="thumbs">
 
     {#each productImages as img}
-      <figure class="thumb image">
+      <figure
+        class="thumb image {img === selected ? 'is-selected' : ''}"
+        on:click={() => select(img)}>
         <img src={img.src} alt={img.alt} />
       </figure>
     {/each}
