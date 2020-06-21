@@ -8,15 +8,26 @@
   }
 </script>
 
+<style>
+  .card {
+    max-width: 160px;
+  }
+  .stars {
+    font-size: 0.6rem;
+  }
+</style>
+
 <div class="card">
   <div class="card-image">
-    <figure class="image is-4by3">
+    <figure class="image is-1by1">
       <img src={product.image.src} alt={product.image.alt} />
     </figure>
   </div>
   <div class="card-content">
-    <p class="title is-4">Curabitur a Tortor Nec Lorem Bibendum</p>
-    <StarRating stars={3.2} nrOfRatings={12} />
+    <p class="title is-6">Curabitur a Tortor Nec Lorem Bibendum</p>
+    <div class="stars">
+      <StarRating stars={3.2} nrOfRatings={12} />
+    </div>
     <!-- <div class="media">
       <div class="media-left" />
       <div class="media-content">

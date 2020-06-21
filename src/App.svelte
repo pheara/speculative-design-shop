@@ -8,6 +8,7 @@
   import Navbar from './Navbar.svelte'
   import CheckoutBox from './CheckoutBox.svelte'
   import ProductCard from './ProductCard.svelte'
+  import ProductCardRow from './ProductCardRow.svelte'
   //   export let name
 </script>
 
@@ -39,19 +40,7 @@
   <hr />
 
   <section>
-
-    <div>
-
-      <h2 class="title is-4">Similar Products</h2>
-
-      <div style="display: flex; flex-direction: row;">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-      </div>
-
-    </div>
-
+    <h2 class="title is-4">Similar Products</h2>
+    <ProductCardRow />
   </section>
 </main>
