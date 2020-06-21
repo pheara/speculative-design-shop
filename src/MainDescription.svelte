@@ -3,6 +3,14 @@
   export { clazz as class }
 
   import StarRating from './StarRating.svelte'
+
+  //   export let id = '0ac55dd3'
+  export let title = ''
+  export let stars = 0.0
+  export let nrOfRatings = 0
+  export let nrOfComments = 0
+  //   export let images = []
+  export let description = ''
 </script>
 
 <style>
@@ -23,40 +31,18 @@
 </style>
 
 <div class="column is-half content has-text-left {clazz}">
-  <h1>Connection Wristband</h1>
+
+  <h1>{title}</h1>
 
   <div class="rating">
     <div class="starcontainer">
-      <StarRating stars={4.1} nrOfRatings={51} />
+      <StarRating {stars} {nrOfRatings} />
     </div>
-    <a href="./" class="comments">51 comments</a>
+    <a href="./" class="comments">
+      {nrOfComments} comment{nrOfComments > 1 ? 's' : ''}
+    </a>
   </div>
 
-  <p>
-    Aliquam sed tincidunt rutrum, aliquam vel sem. Proin vehicula tempor enim.
-    Ut dignissim at justo at vulputate. Nunc quis hendrerit elit, id ultrices
-    libero. Morbi lobortis in justo ut dapibus. Sed ultricies, erat in mollis
-    semper, enim nisl interdum erat, ut euismod massa ante in magna.
-  </p>
-
-  <ul>
-    <li>
-      Integer varius lectus vel sagittis auctor. Curabitur id tempor arcu.
-    </li>
-    <li>Phasellus sed consequat dolor, eget pulvinar nisl.</li>
-    <li>
-      Suspendisse vel dui tempor diam blandit scelerisque a ut sem. Praesent at
-      sollicitudin felis. Aenean tellus nibh, faucibus ac lectus quis, tincidunt
-      consectetur sem.
-    </li>
-    <li>
-      Phasellus mi nunc, aliquam sed tincidunt rutrum, aliquam vel sem. Proin
-      vehicula tempor enim. Ut dignissim at justo at vulputate. Nunc quis
-      hendrerit elit, id ultrices libero. Morbi lobortis in justo ut dapibus.
-      Sed ultricies, erat in mollis semper, enim nisl interdum erat, ut euismod
-      massa ante in magna.
-    </li>
-  </ul>
-  <p />
+  {@html description}
 
 </div>
