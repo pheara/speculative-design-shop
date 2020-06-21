@@ -1,6 +1,9 @@
 <script>
   import ProductCard from './ProductCard.svelte'
 
+  let className = ''
+  export { className as class }
+
   export let products = {}
   const emptyImg = { src: '', alt: '' }
 </script>
@@ -13,7 +16,7 @@
   }
 </style>
 
-<div class="root">
+<div class="root pb-4 {className}">
   {#each products as p}
     <div class="cardwrapper ml-3">
       <ProductCard
