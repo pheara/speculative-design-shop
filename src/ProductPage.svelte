@@ -14,6 +14,7 @@
   import { products } from './data.js'
   $: product = products[id]
   $: productImages = product.images
+  $: nrOfComments = product.comments ? product.comments.length : 0
 
   $: productRecommendations = shuffleArray(
     Object.values(products).filter((p) => p !== product),
@@ -22,7 +23,7 @@
 
 <section id="product" class="columns section">
   <Gallery class="column is-one-quarter" {productImages} />
-  <MainDescription class="column is-half" {...product} />
+  <MainDescription class="column is-half" {...product} {nrOfComments} />
   <CheckoutBox class="column is-one-quarter" price={product.priceEUR} />
 </section>
 
