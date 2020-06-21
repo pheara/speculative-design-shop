@@ -33,10 +33,13 @@ function genImgs(id, numImgs) {
   let imgs = [];
   for (let i = 0; i < numImgs; i++) {
     imgs.push({
-      src: `https://via.placeholder.com/500x500.png?text=${id}+${i + 1}`,
+      src:
+        `https://via.placeholder.com/500x500.png?text=pic+` +
+        `nr+${i + 1}+for+${id}`,
       alt: `TODO alt text for ${id}, pic #${i + 1}`,
     });
   }
+  return imgs;
 }
 
 export const products = {

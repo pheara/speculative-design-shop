@@ -2,32 +2,7 @@
   let clazz = ''
   export { clazz as class }
 
-  const productPictures = [
-    {
-      alt: 'TODO the product (1)',
-      src: 'https://via.placeholder.com/500x500.png?text=image+of+product+1',
-    },
-    {
-      alt: 'TODO the product (2)',
-      src: 'https://via.placeholder.com/500x500.png?text=image+of+product+2',
-    },
-    {
-      alt: 'TODO the product (3)',
-      src: 'https://via.placeholder.com/500x500.png?text=image+of+product+3',
-    },
-    {
-      alt: 'TODO the product (4)',
-      src: 'https://via.placeholder.com/500x500.png?text=image+of+product+4',
-    },
-    {
-      alt: 'TODO the product (5)',
-      src: 'https://via.placeholder.com/500x500.png?text=image+of+product+5',
-    },
-    {
-      alt: 'TODO the product (6)',
-      src: 'https://via.placeholder.com/500x500.png?text=image+of+product+6',
-    },
-  ]
+  export let productImages = []
 </script>
 
 <style>
@@ -51,12 +26,10 @@
 </style>
 
 <div class="gallery {clazz}">
-  <img
-    class="largeImg"
-    src={productPictures[0].src}
-    alt={productPictures[0].alt} />
+  <img class="largeImg" src={productImages[0].src} alt={productImages[0].alt} />
   <div class="thumbs">
-    {#each productPictures as img}
+
+    {#each productImages as img}
       <figure class="thumb image">
         <img src={img.src} alt={img.alt} />
       </figure>

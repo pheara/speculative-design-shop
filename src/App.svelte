@@ -13,6 +13,7 @@
   import { products } from './data.js'
   //   const product = products[Object.keys(products)[0]] // just use first product for now
   const product = products['0ac55dd3']
+  const productImages = product.images
   //   export let name
 </script>
 
@@ -36,7 +37,7 @@
 <main>
 
   <section id="product" class="columns section">
-    <Gallery class="column is-one-quarter" />
+    <Gallery class="column is-one-quarter" {productImages} />
     <MainDescription class="column is-half" {...product} />
     <CheckoutBox class="column is-one-quarter box" />
   </section>
