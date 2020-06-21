@@ -24,7 +24,4 @@
         image={p.images.length > 0 ? p.images[0] : emptyImg} />
     </div>
   {/each}
-  <!-- <ProductCard />
-  <ProductCard />
-  <ProductCard /> -->
 </div>

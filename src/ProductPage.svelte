@@ -13,17 +13,12 @@
   export let id = undefined
 
   import { products } from './data.js'
-  //   const product = products[Object.keys(products)[0]] // just use first product for now
-  //   let product = = products['0ac55dd3']
   $: product = products[id]
   $: productImages = product.images
 
   $: productRecommendations = shuffleArray(
     Object.values(products).filter((p) => p !== product),
   )
-
-  //   const product = products['0ac55dd3']
-  //   const productImages = product.images
 </script>
 
 <section id="product" class="columns section">

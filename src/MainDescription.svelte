@@ -26,8 +26,6 @@
   .comments {
     flex-grow: 0;
   }
-
-  /* .nr-of-ratings { } */
 </style>
 
 <div class="column is-half content has-text-left {clazz}">
