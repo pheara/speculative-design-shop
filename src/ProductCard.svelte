@@ -1,16 +1,14 @@
 <script>
+  import { Router, Link, Route, router } from 'yrv'
+
   import StarRating from './StarRating.svelte'
+
+  export let id = ''
   export let title = 'Untitled'
   export let imgsrc = ''
   export let imgalt = ''
   export let stars = 0.0
   export let nrOfRatings = 0.0
-  const product = {
-    image: {
-      alt: 'TODO the product (5)',
-      src: 'https://via.placeholder.com/500x500.png?text=image+of+product+5',
-    },
-  }
 </script>
 
 <style>
@@ -24,17 +22,18 @@
 </style>
 
 <div class="card">
-  <div class="card-image">
-    <figure class="image is-1by1">
-      <img src={imgsrc} alt={imgalt} />
-    </figure>
-  </div>
-  <div class="card-content">
-    <p class="title is-6">{title}</p>
-    <div class="stars">
-      <StarRating {stars} {nrOfRatings} />
+  <Link href="/{id}">
+    <div class="card-image">
+      <figure class="image is-1by1">
+        <img src={imgsrc} alt={imgalt} />
+      </figure>
     </div>
-    <!-- <div class="media">
+    <div class="card-content">
+      <p class="title is-6">{title}</p>
+      <div class="stars">
+        <StarRating {stars} {nrOfRatings} />
+      </div>
+      <!-- <div class="media">
       <div class="media-left" />
       <div class="media-content">
         <p class="title is-4">Curabitur a Tortor Nec Lorem Bibendum</p>
@@ -52,5 +51,6 @@
       <br />
       <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
     </div> -->
-  </div>
+    </div>
+  </Link>
 </div>

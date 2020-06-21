@@ -15,6 +15,19 @@
   //   let product = = products['0ac55dd3']
   $: product = products[id]
   $: productImages = product.images
+
+  $: productRecommendations = Object.values(products)
+  //   let productRecommendations = {}
+  //   $: {
+  //     productRecommendations = {}
+  //     if (product && product.id) {
+  //       Object.keys(products)
+  //         .filter((k) => k !== product.id)
+  //         .forEach((k) => (productRecommendations[k] = products[k]))
+  //     }
+  //     productRecommendations = productRecommendations
+  //   }
+
   //   const product = products['0ac55dd3']
   //   const productImages = product.images
 </script>
@@ -29,5 +42,5 @@
 
 <section>
   <h2 class="title is-4">Similar Products</h2>
-  <ProductCardRow />
+  <ProductCardRow products={productRecommendations} />
 </section>
