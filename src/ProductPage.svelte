@@ -6,6 +6,8 @@
   import ProductCard from './ProductCard.svelte'
   import ProductCardRow from './ProductCardRow.svelte'
 
+  import { shuffleArray, filterObject } from './utils.js'
+
   import ProductPage from './ProductPage.svelte'
 
   export let id = undefined
@@ -16,17 +18,9 @@
   $: product = products[id]
   $: productImages = product.images
 
-  $: productRecommendations = Object.values(products)
-  //   let productRecommendations = {}
-  //   $: {
-  //     productRecommendations = {}
-  //     if (product && product.id) {
-  //       Object.keys(products)
-  //         .filter((k) => k !== product.id)
-  //         .forEach((k) => (productRecommendations[k] = products[k]))
-  //     }
-  //     productRecommendations = productRecommendations
-  //   }
+  $: productRecommendations = shuffleArray(
+    Object.values(products).filter((p) => p !== product),
+  )
 
   //   const product = products['0ac55dd3']
   //   const productImages = product.images
