@@ -20,10 +20,11 @@
 </script>
 
 <style>
-  .stars {
+  .fullrow {
     display: flex;
     flex-direction: row;
     align-items: baseline;
+    flex-wrap: wrap;
   }
 
   .star {
@@ -33,35 +34,33 @@
   /* .nr-of-ratings { } */
 </style>
 
-<div class="stars {clazz}">
+<div class="fullrow {clazz}">
 
-  <img
-    src="../star-{stars > 0.5 ? 'full' : 'empty'}.svg"
-    alt="full star"
-    class="star" />
-  <img
-    src="../star-{stars > 1.5 ? 'full' : 'empty'}.svg"
-    class="ml-1 star"
-    alt="full star" />
-  <img
-    src="../star-{stars > 2.5 ? 'full' : 'empty'}.svg"
-    class="ml-1 star"
-    alt="full star" />
-  <img
-    src="../star-{stars > 3.5 ? 'full' : 'empty'}.svg"
-    class="ml-1 star"
-    alt="full star" />
-  <img
-    src="../star-{stars > 4.5 ? 'full' : 'empty'}.svg"
-    class="ml-1 star"
-    alt="full star" />
+  <div class="mr-2">
+    <img
+      src="../star-{stars > 0.5 ? 'full' : 'empty'}.svg"
+      alt="full star"
+      class="star mr-1" />
+    <img
+      src="../star-{stars > 1.5 ? 'full' : 'empty'}.svg"
+      class="star mr-1"
+      alt="full star" />
+    <img
+      src="../star-{stars > 2.5 ? 'full' : 'empty'}.svg"
+      class="star mr-1"
+      alt="full star" />
+    <img
+      src="../star-{stars > 3.5 ? 'full' : 'empty'}.svg"
+      class="star mr-1"
+      alt="full star" />
+    <img
+      src="../star-{stars > 4.5 ? 'full' : 'empty'}.svg"
+      class="star"
+      alt="full star" />
+  </div>
 
-  <!-- <img src="../star-full.svg" alt="full star" />
-  <img src="../star-full.svg" class="ml-1" alt="full star" />
-  <img src="../star-full.svg" class="ml-1" alt="full star" />
-  <img src="../star-full.svg" class="ml-1" alt="full star" />
-  <img src="../star-empty.svg" class="ml-1" alt="empty star" /> -->
-
-  <span class="ml-2">{starsStr}</span>
-  <a href="./" class="ml-2">({nrOfRatingsStr})</a>
+  <div>
+    <span class="mr-2">{starsStr}</span>
+    <a href="./">({nrOfRatingsStr})</a>
+  </div>
 </div>

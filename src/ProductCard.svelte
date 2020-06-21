@@ -18,7 +18,7 @@
     max-width: 160px;
   }
   .stars {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
   }
 </style>
 
