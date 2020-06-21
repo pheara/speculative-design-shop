@@ -3,6 +3,10 @@
   import '@fortawesome/fontawesome-free/css/all.css'
   //   import { Button } from 'svelma'
   //   import Button from 'svelma/src/components/Button.svelte'
+
+  import { Router, Link, Route } from 'svelte-routing'
+  export let url = ''
+
   import Gallery from './Gallery.svelte'
   import MainDescription from './MainDescription.svelte'
   import Navbar from './Navbar.svelte'
@@ -10,11 +14,14 @@
   import ProductCard from './ProductCard.svelte'
   import ProductCardRow from './ProductCardRow.svelte'
 
+  import ProductPage from './ProductPage.svelte'
+
   import { products } from './data.js'
   //   const product = products[Object.keys(products)[0]] // just use first product for now
   const product = products['0ac55dd3']
   const productImages = product.images
-  //   export let name
+
+  window.location.hash // e.g. #product/abc123
 </script>
 
 <style>
@@ -32,20 +39,29 @@
   }
 </style>
 
-<Navbar />
+<Router {url}>
+  <Navbar />
+  <!-- <nav>
+    <Link to="/">Home</Link>
+    <Link to="about">About</Link>
+    <Link to="blog">Blog</Link>
+  </nav> -->
 
-<main>
+  <main>
 
-  <section id="product" class="columns section">
-    <Gallery class="column is-one-quarter" {productImages} />
-    <MainDescription class="column is-half" {...product} />
-    <CheckoutBox class="column is-one-quarter" price={product.priceEUR} />
-  </section>
+    <!-- <div>
+    <Route path="blog/:id" component="{BlogPost}" />
+    <Route path="blog" component="{Blog}" />
+    <Route path="about" component="{About}" />
+    <Route path="/"><Home /></Route>
+  </div> -->
+    <Route path="product/:id" let:params>
+      <ProductPage id={params.id} />
+    </Route>
+    <Route path="/">
+      <ProductPage id="0ac55dd3" />
+    </Route>
 
-  <hr />
+  </main>
 
-  <section>
-    <h2 class="title is-4">Similar Products</h2>
-    <ProductCardRow />
-  </section>
-</main>
+</Router>
