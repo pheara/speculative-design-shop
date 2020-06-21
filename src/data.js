@@ -1,7 +1,8 @@
 // function image(src, alt)
-const description = `
+function genDescription(id) {
+  return `
   <p>
-    Aliquam sed tincidunt rutrum, aliquam vel sem. Proin vehicula tempor enim.
+    Aliquam sed tincidunt rutrum, aliquam vel sem. Description for ${id}, proin vehicula tempor enim.
     Ut dignissim at justo at vulputate. Nunc quis hendrerit elit, id ultrices
     libero. Morbi lobortis in justo ut dapibus. Sed ultricies, erat in mollis
     semper, enim nisl interdum erat, ut euismod massa ante in magna.
@@ -26,6 +27,7 @@ const description = `
   </ul>
   <p />
   `;
+}
 
 function genImgs(id, numImgs) {
   let imgs = [];
@@ -44,7 +46,7 @@ export const products = {
     stars: 4.1,
     nrOfRatings: 51,
     images: genImgs("0ac55dd3", 6),
-    description: "Descripiton for 0ac55dd3. " + description,
+    description: genDescription("0ac55dd3"),
   },
   "26578380": {
     id: "26578380",
@@ -52,7 +54,7 @@ export const products = {
     stars: 3.2,
     nrOfRatings: 4,
     images: genImgs("26578380", 3),
-    description: "Descripiton for 26578380. " + description,
+    description: genDescription("26578380"),
   },
   "2dd88a1f": {
     id: "2dd88a1f",
@@ -60,7 +62,7 @@ export const products = {
     stars: 4.8,
     nrOfRatings: 27,
     images: genImgs("2dd88a1f", 4),
-    description: "Descripiton for 2dd88a1f. " + description,
+    description: genDescription("2dd88a1f"),
   },
   "58b81ae9": {
     id: "58b81ae9",
@@ -68,7 +70,7 @@ export const products = {
     stars: 3.9,
     nrOfRatings: 14,
     images: genImgs("58b81ae9", 1),
-    description: "Descripiton for 58b81ae9. " + description,
+    description: genDescription("58b81ae9"),
   },
   "45c07bdd": {
     id: "45c07bdd",
@@ -76,7 +78,7 @@ export const products = {
     stars: 1.4,
     nrOfRatings: 11,
     images: genImgs("45c07bdd", 2),
-    description: "Descripiton for 45c07bdd. " + description,
+    description: genDescription("45c07bdd"),
   },
   "6561d06e": {
     id: "6561d06e",
@@ -84,7 +86,7 @@ export const products = {
     stars: 4.9,
     nrOfRatings: 39,
     images: genImgs("6561d06e", 5),
-    description: "Descripiton for 6561d06e. " + description,
+    description: genDescription("6561d06e"),
   },
 };
 // 9c75281bf2bd8b2e
