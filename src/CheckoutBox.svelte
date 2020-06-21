@@ -23,6 +23,8 @@
   }
   const deliveryDateStr = deliveryDate.toLocaleDateString('en-US', options)
 
+  let quantitySelected = '1'
+
   //   const
 </script>
 
@@ -35,10 +37,23 @@
       <!-- <p>Currently not deliverable.</p> -->
       <p>until {deliveryDateStr}</p>
     </div>
-    <!-- <div class="delivery mt-5">
-      <h2 class="is-size-7">Quantity:</h2>
-      DROPDOWN HERE
-    </div> -->
+    <div class="delivery mt-5">
+      <label class="is-size-7 mb-1" for="quantity-select">Quantity:</label>
+      <select
+        name="quantity"
+        id="quantity-select"
+        bind:value={quantitySelected}>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+    </div>
     <Button type="is-primary mt-5">
       <Icon pack="fas" icon="cart-plus" />
       <span>Add to Cart</span>
