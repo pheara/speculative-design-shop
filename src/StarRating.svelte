@@ -14,6 +14,7 @@
   //   }
   $: starsBounded = Math.max(0.0, Math.min(5.0, stars))
   $: starsStr = starsBounded.toFixed(1)
+  $: nrOfRatingsStr = nrOfRatings.toFixed(0)
   //   $: starsInt = Math.round(starsBounded)
   //   $: starsArr = starsToBooleanArray(starsInt)
 </script>
@@ -62,5 +63,5 @@
   <img src="../star-empty.svg" class="ml-1" alt="empty star" /> -->
 
   <span class="ml-2">{starsStr}</span>
-  <a href="./" class="ml-2">({nrOfRatings})</a>
+  <a href="./" class="ml-2">({nrOfRatingsStr})</a>
 </div>

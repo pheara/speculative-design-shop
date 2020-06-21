@@ -1,5 +1,10 @@
 <script>
   import StarRating from './StarRating.svelte'
+  export let title = 'Untitled'
+  export let imgsrc = ''
+  export let imgalt = ''
+  export let stars = 0.0
+  export let nrOfRatings = 0.0
   const product = {
     image: {
       alt: 'TODO the product (5)',
@@ -20,13 +25,13 @@
 <div class="card">
   <div class="card-image">
     <figure class="image is-1by1">
-      <img src={product.image.src} alt={product.image.alt} />
+      <img src={imgsrc} alt={imgalt} />
     </figure>
   </div>
   <div class="card-content">
-    <p class="title is-6">Curabitur a Tortor Nec Lorem Bibendum</p>
+    <p class="title is-6">{title}</p>
     <div class="stars">
-      <StarRating stars={3.2} nrOfRatings={12} />
+      <StarRating {stars} {nrOfRatings} />
     </div>
     <!-- <div class="media">
       <div class="media-left" />
