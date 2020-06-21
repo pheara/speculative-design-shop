@@ -22,7 +22,11 @@
   .stars {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: baseline;
+  }
+
+  .star {
+    max-height: 1em;
   }
 
   /* .nr-of-ratings { } */
@@ -30,22 +34,25 @@
 
 <div class="stars {clazz}">
 
-  <img src="../star-{stars > 0.5 ? 'full' : 'empty'}.svg" alt="full star" />
+  <img
+    src="../star-{stars > 0.5 ? 'full' : 'empty'}.svg"
+    alt="full star"
+    class="star" />
   <img
     src="../star-{stars > 1.5 ? 'full' : 'empty'}.svg"
-    class="ml-1"
+    class="ml-1 star"
     alt="full star" />
   <img
     src="../star-{stars > 2.5 ? 'full' : 'empty'}.svg"
-    class="ml-1"
+    class="ml-1 star"
     alt="full star" />
   <img
     src="../star-{stars > 3.5 ? 'full' : 'empty'}.svg"
-    class="ml-1"
+    class="ml-1 star"
     alt="full star" />
   <img
     src="../star-{stars > 4.5 ? 'full' : 'empty'}.svg"
-    class="ml-1"
+    class="ml-1 star"
     alt="full star" />
 
   <!-- <img src="../star-full.svg" alt="full star" />
