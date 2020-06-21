@@ -29,7 +29,7 @@
 
 <hr />
 
-<section>
+<section id="similarproducts">
   <h2 class="title is-4">Similar Products</h2>
   <ProductCardRow products={productRecommendations} />
 </section>
