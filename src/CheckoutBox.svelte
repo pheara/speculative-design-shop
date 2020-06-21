@@ -4,10 +4,18 @@
   //   import { Icon } from 'svelma'
   import Icon from 'svelma/src/components/Icon.svelte'
   import Button from 'svelma/src/components/Button.svelte'
+
+  export let price = 0
+  $: priceStr = new String(
+    new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'EUR',
+    }).format(price),
+  )
 </script>
 
 <div class={clazz}>
-  <p>€49.90</p>
+  <p>{priceStr}</p>
   <!-- <p> Delivery until 20-25 August 2020
 </p> -->
   <p>Currently not deliverable.</p>

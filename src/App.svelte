@@ -39,7 +39,7 @@
   <section id="product" class="columns section">
     <Gallery class="column is-one-quarter" {productImages} />
     <MainDescription class="column is-half" {...product} />
-    <CheckoutBox class="column is-one-quarter box" />
+    <CheckoutBox class="column is-one-quarter box" price={product.priceEUR} />
   </section>
 
   <hr />
