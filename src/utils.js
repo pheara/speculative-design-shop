@@ -20,3 +20,7 @@ export function filterObject(obj, f) {
   });
   return res;
 }
+
+export function getRandomInt(min, maxExcl) {
+  return Math.floor(Math.random() * (maxExcl - min) + min);
+}
