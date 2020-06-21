@@ -2,7 +2,7 @@
   import ProductCard from './ProductCard.svelte'
 
   const products = []
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 6; i++) {
     products.push({
       title: `Curabitur a Tortor Nec Lorem Bibendum (${i + 1})`,
       imgsrc: `https://via.placeholder.com/500x500.png?text=image+of+product+${
