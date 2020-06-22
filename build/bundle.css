@@ -1,0 +1,10 @@
+[data-failure].svelte-7lze0z{color:red}
+[data-failure].svelte-kx2cky{border:1px dashed silver}
+main.svelte-177t831{text-align:center;padding:1em;max-width:240px;margin:0 auto}@media(min-width: 640px){main.svelte-177t831{max-width:none}}
+.gallery.svelte-e944md{display:flex;flex-direction:column}.thumbs.svelte-e944md{margin-top:0.25rem;display:grid;grid-template-columns:[col1-start] 1fr 1fr 1fr 1fr [lastcol-end];grid-template-rows:1fr;grid-column-gap:0.25rem;grid-row-gap:0.25rem}.thumb.svelte-e944md{border:1px solid grey}.thumb.is-selected.svelte-e944md{border-color:#00d1b2;border-width:2px}
+.rating.svelte-5vmyuf{display:flex;flex-direction:row;align-items:flex-start}.starcontainer.svelte-5vmyuf{flex-grow:1}.comments.svelte-5vmyuf{flex-grow:0}
+.card.svelte-1xe11vv{max-width:160px;min-width:160px}.stars.svelte-1xe11vv{font-size:0.5rem}
+.root.svelte-e536r8{display:flex;flex-direction:row;overflow-x:auto}
+.fullrow.svelte-as241s{display:flex;flex-direction:row;align-items:baseline;flex-wrap:wrap}.star.svelte-as241s{max-height:1em}
+
+/*# sourceMappingURL=bundle.css.map */
