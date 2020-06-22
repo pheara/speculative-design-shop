@@ -7332,6 +7332,8 @@ var app = (function () {
         comments: comments,
       },
     };
+
+    console.log(products);
     // 9c75281bf2bd8b2e
     // 73448b8241a7da1a42195c19dc20880d
     // 9bb7862bcf3dc5747dee8b962e414cba
