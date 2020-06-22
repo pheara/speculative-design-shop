@@ -4074,7 +4074,7 @@ var app = (function () {
     			t1 = text(/*nrOfRatingsStr*/ ctx[4]);
     			t2 = text(")");
     			attr_dev(a, "href", "./");
-    			add_location(a, file$4, 64, 6, 1454);
+    			add_location(a, file$4, 64, 6, 1449);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -4145,31 +4145,31 @@ var app = (function () {
     			t5 = text(/*starsStr*/ ctx[3]);
     			t6 = space();
     			if (if_block) if_block.c();
-    			if (img0.src !== (img0_src_value = "../star-" + (/*stars*/ ctx[2] > 0.5 ? "full" : "empty") + ".svg")) attr_dev(img0, "src", img0_src_value);
+    			if (img0.src !== (img0_src_value = "./star-" + (/*stars*/ ctx[2] > 0.5 ? "full" : "empty") + ".svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "full star");
     			attr_dev(img0, "class", "star mr-1 svelte-as241s");
     			add_location(img0, file$4, 39, 4, 801);
-    			if (img1.src !== (img1_src_value = "../star-" + (/*stars*/ ctx[2] > 1.5 ? "full" : "empty") + ".svg")) attr_dev(img1, "src", img1_src_value);
+    			if (img1.src !== (img1_src_value = "./star-" + (/*stars*/ ctx[2] > 1.5 ? "full" : "empty") + ".svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "class", "star mr-1 svelte-as241s");
     			attr_dev(img1, "alt", "full star");
-    			add_location(img1, file$4, 43, 4, 916);
-    			if (img2.src !== (img2_src_value = "../star-" + (/*stars*/ ctx[2] > 2.5 ? "full" : "empty") + ".svg")) attr_dev(img2, "src", img2_src_value);
+    			add_location(img1, file$4, 43, 4, 915);
+    			if (img2.src !== (img2_src_value = "./star-" + (/*stars*/ ctx[2] > 2.5 ? "full" : "empty") + ".svg")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "class", "star mr-1 svelte-as241s");
     			attr_dev(img2, "alt", "full star");
-    			add_location(img2, file$4, 47, 4, 1031);
-    			if (img3.src !== (img3_src_value = "../star-" + (/*stars*/ ctx[2] > 3.5 ? "full" : "empty") + ".svg")) attr_dev(img3, "src", img3_src_value);
+    			add_location(img2, file$4, 47, 4, 1029);
+    			if (img3.src !== (img3_src_value = "./star-" + (/*stars*/ ctx[2] > 3.5 ? "full" : "empty") + ".svg")) attr_dev(img3, "src", img3_src_value);
     			attr_dev(img3, "class", "star mr-1 svelte-as241s");
     			attr_dev(img3, "alt", "full star");
-    			add_location(img3, file$4, 51, 4, 1146);
-    			if (img4.src !== (img4_src_value = "../star-" + (/*stars*/ ctx[2] > 4.5 ? "full" : "empty") + ".svg")) attr_dev(img4, "src", img4_src_value);
+    			add_location(img3, file$4, 51, 4, 1143);
+    			if (img4.src !== (img4_src_value = "./star-" + (/*stars*/ ctx[2] > 4.5 ? "full" : "empty") + ".svg")) attr_dev(img4, "src", img4_src_value);
     			attr_dev(img4, "class", "star svelte-as241s");
     			attr_dev(img4, "alt", "full star");
-    			add_location(img4, file$4, 55, 4, 1261);
+    			add_location(img4, file$4, 55, 4, 1257);
     			attr_dev(div0, "class", "mr-2");
     			add_location(div0, file$4, 38, 2, 778);
     			attr_dev(span, "class", "mr-2");
-    			add_location(span, file$4, 62, 4, 1389);
-    			add_location(div1, file$4, 61, 2, 1379);
+    			add_location(span, file$4, 62, 4, 1384);
+    			add_location(div1, file$4, 61, 2, 1374);
     			attr_dev(div2, "class", div2_class_value = "fullrow " + /*clazz*/ ctx[0] + " svelte-as241s");
     			add_location(div2, file$4, 36, 0, 745);
     		},
@@ -4196,23 +4196,23 @@ var app = (function () {
     			if (if_block) if_block.m(div1, null);
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*stars*/ 4 && img0.src !== (img0_src_value = "../star-" + (/*stars*/ ctx[2] > 0.5 ? "full" : "empty") + ".svg")) {
+    			if (dirty & /*stars*/ 4 && img0.src !== (img0_src_value = "./star-" + (/*stars*/ ctx[2] > 0.5 ? "full" : "empty") + ".svg")) {
     				attr_dev(img0, "src", img0_src_value);
     			}
 
-    			if (dirty & /*stars*/ 4 && img1.src !== (img1_src_value = "../star-" + (/*stars*/ ctx[2] > 1.5 ? "full" : "empty") + ".svg")) {
+    			if (dirty & /*stars*/ 4 && img1.src !== (img1_src_value = "./star-" + (/*stars*/ ctx[2] > 1.5 ? "full" : "empty") + ".svg")) {
     				attr_dev(img1, "src", img1_src_value);
     			}
 
-    			if (dirty & /*stars*/ 4 && img2.src !== (img2_src_value = "../star-" + (/*stars*/ ctx[2] > 2.5 ? "full" : "empty") + ".svg")) {
+    			if (dirty & /*stars*/ 4 && img2.src !== (img2_src_value = "./star-" + (/*stars*/ ctx[2] > 2.5 ? "full" : "empty") + ".svg")) {
     				attr_dev(img2, "src", img2_src_value);
     			}
 
-    			if (dirty & /*stars*/ 4 && img3.src !== (img3_src_value = "../star-" + (/*stars*/ ctx[2] > 3.5 ? "full" : "empty") + ".svg")) {
+    			if (dirty & /*stars*/ 4 && img3.src !== (img3_src_value = "./star-" + (/*stars*/ ctx[2] > 3.5 ? "full" : "empty") + ".svg")) {
     				attr_dev(img3, "src", img3_src_value);
     			}
 
-    			if (dirty & /*stars*/ 4 && img4.src !== (img4_src_value = "../star-" + (/*stars*/ ctx[2] > 4.5 ? "full" : "empty") + ".svg")) {
+    			if (dirty & /*stars*/ 4 && img4.src !== (img4_src_value = "./star-" + (/*stars*/ ctx[2] > 4.5 ? "full" : "empty") + ".svg")) {
     				attr_dev(img4, "src", img4_src_value);
     			}
 
